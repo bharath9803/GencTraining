@@ -1,2 +1,3 @@
-*.py
-*.xml
+
+temp/pass.py
+debug.log
