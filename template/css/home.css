@@ -1,0 +1,30 @@
+
+#img-id {
+    margin-bottom: 10px;
+    border-radius: 50px;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(95, 146, 255, 0.5); 
+}
+#fix {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: larger;
+    padding: 15px;
+    border-radius: 100px;
+    font-style: italic;
+    position: relative; 
+    text-align: center; 
+    width: auto; 
+    color: rgb(0, 0, 0);
+
+    
+}
+
+
+li:hover {
+    background-color: #eff0ca; 
+    font-weight: bolder ;
+    transition: background-color 0.3s ease; 
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}

@@ -1,0 +1,27 @@
+#book-container {
+    margin-top: 150px; 
+
+    width: 650px; 
+    height: 300px;
+    padding: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+#mail-box {
+    margin-left: 145px;
+}  
+li:hover {
+    background-color: #eff0ca; 
+    font-weight: bolder ;
+    transition: background-color 0.3s ease; 
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+.container{
+    color: white;
+
+}
+textarea{
+    width: 800px; /* Increased width for a larger message box */
+    height: 150px; /* Adjusted height for better visibility */
+}
