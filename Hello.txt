@@ -1,0 +1,6 @@
+int main () {
+
+i am joshua
+i am bharath
+
+}
