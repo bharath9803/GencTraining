@@ -32,8 +32,11 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light second-color " style= "display: none; ">
         <div class="container-fluid">
-            <div class="collapse navbar-collapse d-flex justify-content-start " >
-                <h1 class=" navbar-text display-2" style=" color: rgb(115, 55, 128);  font-weight: bolder; margin: 0 20px;">Fix <i>n</i> Fix</h1>
+            <h1 class="navbar-text display-2" style="color: rgb(115, 55, 128); font-weight: bolder; margin: 0 20px;">Fix <i>n</i> Fix</h1>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center " id="navbarNav" >
 
                 <ul class="navbar-nav ">
                     <li class="nav-item">
@@ -54,16 +57,23 @@
                             Check Request
                         </a>
                     </li>
-                </ul>
-                <div class="collapse navbar-collapse justify-content-end">
-                    <ul class="navbar-nav "> 
                         <li class="nav-item">
                             <a class="nav-link" href="/regbike.html">
                                 <img src="https://www.svgrepo.com/show/481011/bike.svg" alt="" width="50" height="36">
                                 Reg Bike
                             </a>
                         </li>
-            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login.html">
+                                <img src="https://www.svgrepo.com/show/477710/login-3.svg" alt="" width="50" height="36">
+                                Login
+                            </a>
+                        </li>
+                       
+                    </ul>
+
+                
+            </div>
         </div>
     </nav>
     
@@ -105,6 +115,8 @@
                     </div>
                 </div>
                 <button class="btn btn-primary mt-4">Login</button>
+                <button id="adminDummyBtn" class="btn btn-primary">Go to Admin Panel</button>   
+
             </form>
         </div>
     </div>

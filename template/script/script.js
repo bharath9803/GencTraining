@@ -9,6 +9,9 @@ $(document).ready(function(){
         console.log("Admin Login Button Clicked");
         $('#adminLoginForm').show();
         $('#userLoginForm').hide();
+        $('#adminDummyBtn').click(function() {
+            window.location.href = "    admin/adminpanel.html"; 
+        });
     });
     $('#login-container').slideDown(1000); 
     $('#home').css({
