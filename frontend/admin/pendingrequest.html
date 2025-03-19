@@ -1,0 +1,94 @@
+<!-- Admin Dashboard for Bike Service Management -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/frontend/admin/admin.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../template/script/script.js"></script>
+    <title>Admin Dashboard</title>
+    <style>
+        .first-color { 
+	background: #081f37; 
+}
+	
+.second-color { 
+	background: #5fc9f3; 
+}
+
+.third-color { 
+	background: #2e79ba; 
+}
+
+.fourth-color { 
+	background: #1e549f; 
+}
+        </style>
+    
+</head>
+<body>
+    <div class="sidebar first-color">
+        <h2 class="text-center">Admin Panel</h2>
+        <a href="/admin/adminpanel.html">Dashboard</a>
+        <a href="pendingrequest.html">Pending Service Requests</a>
+        <a href="updateservice.html">Update Service Status</a>
+        <a href="payments.html">Payments & Invoices</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="content">
+        <div class="card p-3 mt-3">
+            <h4>Pending Service Requests</h4>
+            <table id="slotsTable" class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Booking ID</th>
+                        <th>User Name</th>
+                        <th>Bike Model</th>
+                        <th>Service Type</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>John Doe</td>
+                        <td>Yamaha R15</td>
+                        <td>Oil Change</td>
+                        <td><button class="btn btn-success">Accept</button>
+                        <button class="btn btn-danger">Reject</button></td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Jane Smith</td>
+                        <td>Honda CB350</td>
+                        <td>Full Service</td>
+                        <td><button class="btn btn-success">Accept</button>
+                            <button class="btn btn-danger">Reject</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('http://localhost:8080/slots/all')
+            .then(response => response.json())
+            .then(data => {
+                const tableBody = document.getElementById('slotsTable').getElementsByTagName('tbody')[0];
+                data.forEach(slot => {
+                    const row = tableBody.insertRow();
+                    row.insertCell(0).textContent = slot.id;
+                    row.insertCell(1).textContent = slot.bikeModel;
+                    row.insertCell(2).textContent = slot.serviceType;
+                    row.insertCell(3).textContent = slot.date;
+                    row.insertCell(4).textContent = slot.timeSlot;
+                    row.insertCell(5).textContent = slot.comments;
+                });
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

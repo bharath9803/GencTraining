@@ -1,0 +1,77 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color:  #081f37;
+    color: white;
+    transition: left 0.3s ease-in-out;
+    animation: slideIn 1s forwards; 
+}
+
+@keyframes slideIn {
+    from {
+        left: -250px;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #5fc9f3;
+    color: white;
+    font-weight: bold;
+}
+.content {
+    margin-left: 260px;
+    padding: 20px;
+}
+th{
+    font-weight: bolder;
+
+}
+img{
+    margin-left: 60px;
+  width: 200px;
+  height: 200px;
+}
+
+.flashcard {
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.flashcard:hover {
+    transform: scale(1.05);
+}
+
+.flashcard:hover .card-hover-details {
+    visibility: visible; /* Changed to visibility for better control */
+    opacity: 1; /* Ensure the details are fully opaque */
+    transition: opacity 0.2s ease-in; /* Smooth transition for visibility */
+}
+
+.card-hover-details {
+    visibility: hidden; /* Initially hidden */
+    font-weight: bolder;
+    opacity: 0; /* Fully transparent */
+    position: absolute;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10;
+    top: 100%; /* Position below the card */
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visibility */
+    transition: opacity 0.2s ease-in; /* Smooth transition for visibility */
+}
+
+
